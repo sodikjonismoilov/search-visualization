@@ -1,0 +1,32 @@
+/* searchStyles.css */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+canvas {
+    border: 2px solid #333;
+    margin-top: 20px;
+}
+
+input[type="number"] {
+    padding: 0.5rem;
+    width: 180px;
+    font-size: 1rem;
+    margin-right: 10px;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
