@@ -14,7 +14,7 @@ A beautifully animated visualization of three core search algorithms — **Linea
 
 | Linear Search | Binary Search | Exponential Search |
 |---------------|----------------|--------------------|
-| ![Linear](./) | ![Binary](https://github.com/sodikjonismoilov/search-visualization/blob/main/src/assets/binary-search.png) | ![Exponential](./screenshots/exponential.png) |
+| ![Linear](https://github.com/sodikjonismoilov/search-visualization/blob/main/src/assets/linear-search.png) | ![Binary](https://github.com/sodikjonismoilov/search-visualization/blob/main/src/assets/binary-search.png) | ![Exponential]() |
 
 ---
 
