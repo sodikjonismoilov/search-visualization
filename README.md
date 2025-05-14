@@ -1,12 +1,108 @@
-# React + Vite
+# 🔍 Search Algorithm Visualization
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A beautifully animated visualization of three core search algorithms — **Linear Search**, **Binary Search**, and **Exponential Search** — built with **React**, **p5.js**, and **Vite**. This project demonstrates how different search strategies perform over a sorted array using step-by-step canvas animations and visual feedback.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📽️ Demo Video
 
-## Expanding the ESLint configuration
+🎥 [Click here to watch the demo](https://your-video-link.com)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 📸 Screenshots
+
+| Linear Search | Binary Search | Exponential Search |
+|---------------|----------------|--------------------|
+| ![Linear](./screenshots/linear.png) | ![Binary](./screenshots/binary.png) | ![Exponential](./screenshots/exponential.png) |
+
+---
+
+## 📦 Features
+
+- 🔢 Index labels under every element
+- ✨ Live animation with `p5.js`
+- 🧠 Step-by-step comparisons of different search algorithms
+- 🧪 Real-time input: Try different targets
+- ✅ Output messages for success/failure
+- 🖼️ Footer with author details
+- 🎨 Fully responsive and clean CSS
+
+---
+
+## 🧠 Algorithm Analysis
+
+### 🔹 Linear Search – Brute Force
+
+📸 ![Linear Code](./screenshots/linear-code.png)
+
+- **Input Size (`n`)**: Number of elements in the array
+- **Basic Operation**: `if (values[i] === target)`
+- **Depends on Input Size?** ✅ Yes
+- **Recurrence Relation**:  
+  `T(n) = T(n - 1) + 1`, with `T(1) = 1`
+- **Solved**:  
+  `T(n) = n` → **Time Complexity:** `O(n)`
+
+---
+
+### 🔹 Binary Search – Divide & Conquer
+
+📸 ![Binary Code](./screenshots/binary-code.png)
+
+- **Input Size (`n`)**: Number of elements in the array
+- **Basic Operation**: Compare target with `values[mid]`
+- **Depends on Input Size?** ✅ Yes
+- **Recurrence Relation**:  
+  `T(n) = T(n / 2) + 1`, with `T(1) = 1`
+- **Solved**:  
+  `T(n) = O(log n)`
+
+---
+
+### 🔹 Exponential Search – Hybrid (Exponential + Binary)
+
+📸 ![Exponential Code](./screenshots/exponential-code.png)
+
+- **Input Size (`n`)**: Number of elements in the array  
+- **Basic Operation**: Comparisons during exponential expansion and binary phase
+- **Depends on Input Size?** ✅ Yes
+- **Recurrence Relation**:  
+  `T(i) = log i + log i = 2 log i` where `i` is the position of the target
+- **Solved**:  
+  `T(i) = O(log i)`
+
+---
+
+## ⏱️ Time Complexity Comparison
+
+| Algorithm         | Best Case | Average Case | Worst Case | Strategy           |
+|------------------|-----------|---------------|-------------|---------------------|
+| Linear Search     | O(1)      | O(n/2)        | O(n)        | Brute Force         |
+| Binary Search     | O(1)      | O(log n)      | O(log n)    | Divide & Conquer    |
+| Exponential Search| O(1)      | O(log i)      | O(log i)    | Exponential + Binary|
+
+---
+
+## 🗂️ Project Structure
+
+
+---
+
+## 🛠️ Built With
+
+- ⚛️ [React.js](https://reactjs.org/)
+- 🧠 [p5.js](https://p5js.org/)
+- ⚡ [Vite](https://vitejs.dev/)
+- 🎨 CSS3
+
+---
+
+## 📁 How to Run Locally
+
+```bash
+git clone https://github.com/sodikjonismoilov/search-visualization.git
+cd search-visualization
+npm install
+npm run dev
+
