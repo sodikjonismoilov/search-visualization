@@ -34,7 +34,14 @@ A beautifully animated visualization of three core search algorithms — **Linea
 
 ### 🔹 Linear Search – Brute Force
 
-📸 ![Linear Code](./screenshots/linear-code.png)
+
+```plaintext
+LinearSearch(array, target):
+    for i from 0 to length(array) - 1:
+        if array[i] == target:
+            return i  // Found at index i
+    return -1  // Not found
+```
 
 - **Input Size (`n`)**: Number of elements in the array
 - **Basic Operation**: `if (values[i] === target)`
@@ -48,7 +55,25 @@ A beautifully animated visualization of three core search algorithms — **Linea
 
 ### 🔹 Binary Search – Divide & Conquer
 
-📸 ![Binary Code](./screenshots/binary-code.png)
+```
+BinarySearch(array, target):
+    low ← 0
+    high ← length(array) - 1
+
+    while low ≤ high:
+        mid ← floor((low + high) / 2)
+
+        if array[mid] == target:
+            return mid  // Found
+
+        else if array[mid] < target:
+            low ← mid + 1
+
+        else:
+            high ← mid - 1
+
+    return -1  // Not found
+```
 
 - **Input Size (`n`)**: Number of elements in the array
 - **Basic Operation**: Compare target with `values[mid]`
@@ -62,7 +87,34 @@ A beautifully animated visualization of three core search algorithms — **Linea
 
 ### 🔹 Exponential Search – Hybrid (Exponential + Binary)
 
-📸 ![Exponential Code](./screenshots/exponential-code.png)
+```
+ExponentialSearch(array, target):
+    if array[0] == target:
+        return 0
+
+    // Phase 1: Find range for binary search
+    bound ← 1
+    while bound < length(array) and array[bound] < target:
+        bound ← bound × 2
+
+    // Phase 2: Binary search within [bound/2, min(bound, n-1)]
+    low ← floor(bound / 2)
+    high ← min(bound, length(array) - 1)
+
+    while low ≤ high:
+        mid ← floor((low + high) / 2)
+
+        if array[mid] == target:
+            return mid
+
+        else if array[mid] < target:
+            low ← mid + 1
+
+        else:
+            high ← mid - 1
+
+    return -1  // Not found
+```
 
 - **Input Size (`n`)**: Number of elements in the array  
 - **Basic Operation**: Comparisons during exponential expansion and binary phase
