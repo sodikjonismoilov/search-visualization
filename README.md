@@ -6,7 +6,7 @@ A beautifully animated visualization of three core search algorithms — **Linea
 
 ## 📽️ Demo Video
 
-🎥 [Click here to watch the demo](https://your-video-link.com)
+🎥 [Click here to watch the demo](https://youtu.be/fCTfzyRfFYg?si=3_sbH6WkoR79hK8J)
 
 ---
 
